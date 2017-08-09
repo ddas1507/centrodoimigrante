@@ -75,67 +75,14 @@
 					<li><a target="_blank" href="#"><span class="facebook-icon"></span></a></li>
 					<li><a target="_blank" href="#"><span class="pinterest-icon"></span></a></li>
 					<li><a target="_blank" href="#"><span class="flickr-icon"></span></a></li>
-					<li><a target="_blank" href="#"><span class="youtube-icon"></span></a></li>
-					<li><a target="_blank" href="#"><span class="vimeo-icon"></span></a></li>
-					<li><a target="_blank" href="#"><span class="skype-icon"></span></a></li>
-					<li><a target="_blank" href="#"><span class="rss-icon"></span></a></li>
 				</ul>
 			
 			<!-- END #header-content-wrapper -->
 			</div>
 		
 			<!-- BEGIN #main-menu-wrapper -->
-			<?php wp_nav_menu( array( 'theme_location' => 'header-menu' )); ?>
 			<div id="main-menu-wrapper" class="clearfix">
-		
-				<!-- BEGIN #main-menu -->
-				<!--ul id="main-menu">
-					
-					<li class="current_page_item"><a href="index.php">Home</a></li>
-					<li><a href="quemSomos.php">Quem Somos</a></li>
-					<li><a href="parceiros.php">Parceiros</a></li>
-					<li><a href="agenda.php">Agenda</a></li>
-					<li><a href="trabalheConosco.php">Trabalhe Conosco</a></li>
-					<li><a href="contato.php">Contato</a></li-->
-					<!--li><a href="courses.php">Parceiros</a>
-						<ul>
-							<li><a href="courses-single.php">Course Name #1</a></li>
-							<li><a href="courses-single.php">Course Name #2</a></li>
-							<li><a href="courses-single.php">Course Name #3</a>
-								<ul>
-									<li><a href="courses-single.php">Course Name #1</a></li>
-									<li><a href="courses-single.php">Course Name #2</a></li>
-									<li><a href="courses-single.php">Course Name #3</a></li>
-								</ul>
-							</li>
-							<li><a href="courses-single.php">Course Name #4</a></li>
-							<li><a href="courses-single.php">Course Name #5</a></li>
-							<li><a href="courses-single.php">Course Name #6</a></li>
-						</ul>
-					</li-->
-					
-					<!--li><a href="typography.php">Features</a>
-						<ul>
-							<li><a href="events.php">Events</a></li>
-							<li><a href="events-single.php">Events Single</a></li>
-							<li><a href="teachers1.php">Teachers #1</a></li>
-							<li><a href="teachers2.php">Teachers #2</a></li>
-							<li><a href="portfolio.php">Portfolio</a></li>
-							<li><a href="portfolio-single.php">Portfolio Single</a></li>
-							<li><a href="photo-gallery-2-col.php">Gallery - 2 Columns</a></li>
-							<li><a href="photo-gallery-3-col.php">Gallery - 3 Columns</a></li>
-							<li><a href="photo-gallery-4-col.php">Gallery - 4 Columns</a></li>
-							<li><a href="full-width.php">Full Width</a></li>
-							<li><a href="left-sidebar.php">Left Sidebar</a></li>
-							<li><a href="right-sidebar.php">Right Sidebar</a></li>
-							<li><a href="columns.php">Columns</a></li>
-							<li><a href="js-elements.php">JS Elements</a></li>
-							<li><a href="typography.php">Typography</a></li>
-						</ul>
-					</li-->
-
-				<!-- END #main-menu -->
-				<!--/ul-->
+			<?php wp_nav_menu( array( 'theme_location' => 'main-menu' )); ?>
 		
 				<div class="menu-search-button"></div>
 				<form method="get" action="#" class="menu-search-form">
