@@ -75,20 +75,20 @@
 					<li><a target="_blank" href="#"><span class="facebook-icon"></span></a></li>
 					<li><a target="_blank" href="#"><span class="pinterest-icon"></span></a></li>
 					<li><a target="_blank" href="#"><span class="flickr-icon"></span></a></li>
-					<!--li><a target="_blank" href="#"><span class="youtube-icon"></span></a></li>
+					<li><a target="_blank" href="#"><span class="youtube-icon"></span></a></li>
 					<li><a target="_blank" href="#"><span class="vimeo-icon"></span></a></li>
 					<li><a target="_blank" href="#"><span class="skype-icon"></span></a></li>
-					<li><a target="_blank" href="#"><span class="rss-icon"></span></a></li-->
+					<li><a target="_blank" href="#"><span class="rss-icon"></span></a></li>
 				</ul>
 			
 			<!-- END #header-content-wrapper -->
 			</div>
 		
 			<!-- BEGIN #main-menu-wrapper -->
+			<?php wp_nav_menu( array( 'theme_location' => 'header-menu' )); ?>
 			<div id="main-menu-wrapper" class="clearfix">
 		
 				<!-- BEGIN #main-menu -->
-				<?php wp_nav_menu( array( 'theme_location' => 'header-menu' )); ?>
 				<!--ul id="main-menu">
 					
 					<li class="current_page_item"><a href="index.php">Home</a></li>

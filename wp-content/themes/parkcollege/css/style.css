@@ -365,20 +365,20 @@ a {
 }
 
 /* 3.0 - Navigation */
-#main-menu {
+#menu-main-menu {
 	z-index: 999;
 	width: 100%;
 }	
 
-#main-menu ul {
+#menu-main-menu ul {
 	margin: -1px 0 0 0;
 }
 
-#main-menu ul ul {
+#menu-main-menu ul ul {
 	margin: 0;
 }
 
-#main-menu li {
+#menu-main-menu li {
 	background: url(../images/dot_border_v.png) repeat-y top right;
 	line-height: 1;
 	font-size: 14px;
@@ -386,54 +386,54 @@ a {
 	border-top: transparent 3px solid;
 }
 
-#main-menu li a {
+#menu-main-menu li a {
 	padding: 17px 30px 20px 30px;
 }
 
-#main-menu li.current_page_item,
-#main-menu li:hover {
+#menu-main-menu li.current_page_item,
+#menu-main-menu li:hover {
 	border-top: 3px solid;
 }
 
-#main-menu-wrapper {
+#menu-main-menu-wrapper {
 	background: url(../images/dot_border_h.png) repeat-x top left;
 	position: relative;
 }
 
-#main-menu li li {
+#menu-main-menu li li {
 	background: url(../images/dot_border_h.png) #fff repeat-x top left;
 	border-top: none;
 	font-size: 14px;
 	font-weight: 400;
 }
 
-#main-menu li li li:first-child {
+#menu-main-menu li li li:first-child {
 	background: #fff;
 }
 
-#main-menu li li li:first-child:hover {
+#menu-main-menu li li li:first-child:hover {
 	background: #fbfbfb;
 }
 
-#main-menu li li:hover,
-#main-menu li li li:hover {
+#menu-main-menu li li:hover,
+#menu-main-menu li li li:hover {
 	background: url(../images/dot_border_h.png) #fbfbfb repeat-x top left;
 	border-top: none;
 }
 
-#main-menu li li a {
+#menu-main-menu li li a {
 	padding: 15px 30px 15px 30px;
 }
 
-#main-menu li ul {
+#menu-main-menu li ul {
 	box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.2);
 }
 
-#main-menu li a.sf-with-ul {
+#menu-main-menu li a.sf-with-ul {
 	padding-right: 45px ;
 }
 
-#main-menu li a.sf-with-ul:after {
+#menu-main-menu li a.sf-with-ul:after {
 	content: '';
 	position: absolute;
 	top: 40%;
@@ -443,21 +443,21 @@ a {
 	background: url(../images/arrow_down.png) no-repeat left center;
 }
 
-#main-menu li li a.sf-with-ul:after {
+#menu-main-menu li li a.sf-with-ul:after {
 	top: 40%;
 	background: url(../images/arrow_right.png) no-repeat left center;
 	height: 10px;
 }
 
-#main-menu li:last-child {
+#menu-main-menu li:last-child {
 	background: none;
 }
 
-#main-menu li li:last-child {
+#menu-main-menu li li:last-child {
 	background: url(../images/dot_border_h.png) #fff repeat-x top left;
 }
 
-#main-menu li li:last-child:hover {
+#menu-main-menu li li:last-child:hover {
 	background: url(../images/dot_border_h.png) #fbfbfb repeat-x top left;
 }
 

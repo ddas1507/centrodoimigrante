@@ -915,7 +915,7 @@ function wp_get_nav_menu_to_edit( $menu_id = 0 ) {
 		$result .= '</div>';
 
 		if ( empty($menu_items) )
-			return $result . ' <ul class="menu" id="menu-to-edit"> </ul>';
+			return $result . ' <ul class="main-menu" id="menu-to-edit"> </ul>';
 
 		/**
 		 * Filters the Walker class used when adding nav menu items.
@@ -954,7 +954,7 @@ function wp_get_nav_menu_to_edit( $menu_id = 0 ) {
 			$result .= '<div class="notice notice-error notice-alt inline"><p>' . __( 'There are some invalid menu items. Please check or delete them.' ) . '</p></div>';
 		}
 
-		$result .= '<ul class="menu" id="menu-to-edit"> ';
+		$result .= '<ul class="main-menu" id="menu-to-edit"> ';
 		$result .= walk_nav_menu_tree( array_map('wp_setup_nav_menu_item', $menu_items), 0, (object) array('walker' => $walker ) );
 		$result .= ' </ul> ';
 		return $result;

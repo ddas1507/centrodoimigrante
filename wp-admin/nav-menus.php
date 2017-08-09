@@ -779,7 +779,7 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 								echo $edit_markup;
 							} else {
 							?>
-							<ul class="menu" id="menu-to-edit"></ul>
+							<ul class="main-menu" id="menu-to-edit"></ul>
 							<?php } ?>
 							<?php endif; ?>
 							<?php if ( $add_new_screen ) : ?>
