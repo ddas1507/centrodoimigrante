@@ -3,7 +3,6 @@
 <!--[if IE 7]>    <html dir="ltr" lang="en-US" class="ie7"> <![endif]-->
 <!--[if IE 8]>    <html dir="ltr" lang="en-US" class="ie8"> <![endif]-->
 <!--[if gt IE 8]><!--> <html dir="ltr" lang="en-US"> <!--<![endif]-->
-
 <!-- BEGIN head -->
 <head>
 

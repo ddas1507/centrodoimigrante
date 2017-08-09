@@ -2,7 +2,7 @@
 	//imagem destacada
 	add_theme_support( 'post-thumbnails' );
 	
-	//menus dinamicos
+		//menus dinamicos
 	function register_menus(){
 		register_nav_menus(
 			array(

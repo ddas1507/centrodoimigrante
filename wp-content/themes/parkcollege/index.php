@@ -1,5 +1,4 @@
-<?php get_header();?>
-	
+<?php get_header();?>	
 	<!-- BEGIN .slider -->
 	<div class="slider clearfix">
 		
