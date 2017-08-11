@@ -96,9 +96,15 @@
 			
 			<!-- BEGIN .content-block -->
 			<div class="content-block">
-				
-				<h3 class="block-title"><a href="#">Newsletter &raquo;</a></h3>
-				<p>Sed turpis tortor ultricies non adipiscing ultrices in orci ut</p>
+				<?php query_posts('post_type=attributes'); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<h3 class="block-title"><?php the_field('titulo_do_bloco_newsletter');?></h3>
+				<p><?php the_field('descricao_do_bloco_newsletter');?></p>
+				<?php endwhile; ?>
+				<?php else : ?>
+				<?php endif; ?>
+				<?php wp_reset_query(); ?>
+
 				
 				<form method="get" action="#" class="course-finder-form clearfix">
 					<input type="text" value="Email Address" name="email-address" />
@@ -121,12 +127,24 @@
 			</div>
 
 			<!-- BEGIN .content-block -->
-			<div class="content-block">
-				
-				<h3 class="block-title"><a href="http://www.flickr.com/photos/governoromalley/">Flickr Stream &raquo;</a></h3>
+			<div class="content-block" style="padding: 0px">
+				<?php query_posts('post_type=attributes'); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<!--h3 class="block-title"><?php //the_field('titulo_do_bloco_instagram');?></h3-->
+				<?php endwhile; ?>
+				<?php else : ?>
+				<?php endif; ?>
+				<?php wp_reset_query(); ?>
+
 			
 				<div class="flickr_badge_wrapper clearfix">
-					<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;flickr_display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=29479066@N07"></script>
+				<?php query_posts('post_type=attributes'); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<?php the_field('shortcode_instagram');?>
+				<?php endwhile; ?>
+				<?php else : ?>
+				<?php endif; ?>
+				<?php wp_reset_query(); ?>
 				</div>
 				
 			<!-- END .content-block -->	
@@ -140,8 +158,13 @@
 			
 			<!-- BEGIN .content-block -->
 			<div class="content-block">
-				
-				<h3 class="block-title"><a href="blog.php">Últimas Notícias</a></h3>
+				<?php query_posts('post_type=attributes'); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<h3 class="block-title"><?php the_field('titulo_do_bloco_de_blog');?></h3>
+				<?php endwhile; ?>
+				<?php else : ?>
+				<?php endif; ?>
+				<?php wp_reset_query(); ?>
 				
 				<!-- BEGIN .slider-blocks -->
 				<div class="slider-blocks clearfix">
@@ -183,16 +206,34 @@
 			<div class="content-block">
 				
 				<h3 class="block-title">
-					<a href="#">Centro Integrado do Imigrante</a>
-					<br /><span>Pronto para lhe atender</span>
+				<?php query_posts('post_type=attributes'); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<span><?php the_field('titulo_do_bloco_de_video');?></span>
+					<br /><span><?php the_field('subtitulo_do_bloco_de_video');?></span>
+				<?php endwhile; ?>
+				<?php else : ?>
+				<?php endif; ?>
+				<?php wp_reset_query(); ?>
 				</h3>
 				
 				<div class="video-wrapper">
-					<iframe height="215" src="http://player.vimeo.com/video/29521088?autoplay=0&amp;title=0&amp;byline=0&amp;portrait=0;"></iframe>
+				<?php query_posts('post_type=attributes'); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<iframe height="215" src="http://player.vimeo.com/video/<?php the_field('id_do_video');?>?autoplay=0&amp;title=0&amp;byline=0&amp;portrait=0;"></iframe>
+				<?php endwhile; ?>
+				<?php else : ?>
+				<?php endif; ?>
+				<?php wp_reset_query(); ?>
 				</div>
 				
 				<p>
-				Morbi quam arcu, sagittis sit amet gravida a, pretium id ligula. Sed pelle fermentum aliquam.Morbi quam arcu, sagittis sit amet gravida a, pretium id ligula. Sed pelle fermentum aliquam.Morbi quam arcu, sagittis sit amet gravida a, pretium id ligula. Sed pelle fermentum
+				<?php query_posts('post_type=attributes'); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<?php the_field('descrição_do_video');?>
+				<?php endwhile; ?>
+				<?php else : ?>
+				<?php endif; ?>
+				<?php wp_reset_query(); ?>
 				</p>
 				
 			<!-- END .content-block -->	
@@ -206,8 +247,13 @@
 
 			<!-- BEGIN .content-block -->
 			<div class="content-block">
-				
-				<h3 class="block-title"><a href="events.php">Agenda &raquo;</a></h3>
+				<?php query_posts('post_type=attributes'); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<h3 class="block-title"><?php the_field('titulo_do_bloco_agenda');?></h3>
+				<?php endwhile; ?>
+				<?php else : ?>
+				<?php endif; ?>
+				<?php wp_reset_query(); ?>
 				
 				<ul class="event-list">
 				
@@ -265,14 +311,21 @@
 			</div>			
 			<!-- BEGIN .content-block -->
 			<div class="content-block">
-				
 				<ul>
-					<li><a href="#">Students</a></li>
-					<li><a href="#">Teachers</a></li>
-					<li><a href="#">Alumni</a></li>
-					<li><a href="#">Parents</a></li>
-				</ul>
-				
+				<?php query_posts('post_type=attributes'); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<li><a href="<?php the_field('url_da_categoria_1');?>"><?php the_field('titulo_da_categoria_1');?></a></li>
+					<li><a href="<?php the_field('url_da_categoria_2');?>"><?php the_field('titulo_da_categoria_2');?></a></li>
+					<li><a href="<?php the_field('url_da_categoria_3');?>"><?php the_field('titulo_da_categoria_3');?></a></li>
+					<li><a href="<?php the_field('url_da_categoria_4');?>"><?php the_field('titulo_da_categoria_4');?></a></li>
+					<li><a href="<?php the_field('url_da_categoria_5');?>"><?php the_field('titulo_da_categoria_5');?></a></li>
+					<li><a href="<?php the_field('url_da_categoria_6');?>"><?php the_field('titulo_da_categoria_6');?></a></li>
+					<li><a href="<?php the_field('url_da_categoria_7');?>"><?php the_field('titulo_da_categoria_7');?></a></li>
+				<?php endwhile; ?>
+				<?php else : ?>
+				<?php endif; ?>
+				<?php wp_reset_query(); ?>
+				</ul>				
 			<!-- END .content-block -->	
 			</div>
 		

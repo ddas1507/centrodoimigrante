@@ -38,7 +38,7 @@ get_header(); ?>
 
 		<div class="main-content page-content">
             
-            <?php get_template_part( 'library/template-parts/page-title' ); ?>
+            <?php //get_template_part( 'library/template-parts/page-title' ); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 

@@ -2503,3 +2503,7 @@ label span {
 .page-content .page-slider .flex-direction-nav li {
 	margin: 0;
 }
+
+.wp-core-ui .notice.is-dismissible {
+    display: none!important;
+}

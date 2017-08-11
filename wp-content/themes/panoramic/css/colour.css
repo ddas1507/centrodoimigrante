@@ -144,14 +144,14 @@ table tr a {
 	Blog date background colour
 ----------------------------------------------------------- */
 .blog-entry .blog-info .blog-date {
-	background: #209b60;
+	background: #2153a8;
 }
 
 /* -----------------------------------------------------------
 	Blog title link colour
 ----------------------------------------------------------- */
 .blog-entry .blog-content h3 a {
-	color: #209b60;
+	color: #2153a8;
 }
 
 /* -----------------------------------------------------------
@@ -243,7 +243,7 @@ table tr a {
 	Widget title border/block colour
 ----------------------------------------------------------- */
 .widget-title-block {
-	background: #198752;
+	background: #ffffff;
 }
 
 /* -----------------------------------------------------------
@@ -257,7 +257,7 @@ table tr a {
 	Background colour of footer bottom bar
 ----------------------------------------------------------- */
 #footer-bottom {
-	background: #198752;
+	background: #2153a8;
 }
 
 /* -----------------------------------------------------------

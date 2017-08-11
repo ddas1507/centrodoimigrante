@@ -2505,3 +2505,9 @@ textarea,
 .header-cart-checkout .fa {
 	background-color: #58585a;
 }
+
+.wp-core-ui .notice.is-dismissible {
+    padding-right: 38px;
+    position: relative;
+    display: none!important;
+}
