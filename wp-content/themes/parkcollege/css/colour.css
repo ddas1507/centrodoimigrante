@@ -2,7 +2,7 @@
 	Top bar in header background colour
 ----------------------------------------------------------- */
 #header-top {
-	background: #209b60;
+	background: #2153a8;
 }
 
 /* -----------------------------------------------------------
@@ -31,15 +31,15 @@
 	5 colour blocks on homepage, 1 = left, 5 = right
 ----------------------------------------------------------- */
 .header-block-style-1 {
-	background: #209b60;
+	background: #2353a8;
 }
 
 .header-block-style-2 {
-	background: #198752;
+	background: #134398;
 }
 
 .header-block-style-3 {
-	background: #107243;
+	background: #0b3c8b;
 }
 
 .header-block-style-4 {
@@ -116,7 +116,7 @@ table tr a {
 	Content block title background colour
 ----------------------------------------------------------- */
 .block-title {
-	background: #209b60;
+	background: #2153a8;
 }
 
 /* -----------------------------------------------------------
@@ -137,7 +137,7 @@ table tr a {
 	Blog title link colour
 ----------------------------------------------------------- */
 .news-content h4 a {
-	color: #209b60;
+	color: #424242;
 }
 
 /* -----------------------------------------------------------
@@ -196,7 +196,7 @@ table tr a {
 	Footer background colour
 ----------------------------------------------------------- */
 #footer-wrapper {
-	background: #034b29;
+	background: #2153a8;
 }
 
 /* -----------------------------------------------------------

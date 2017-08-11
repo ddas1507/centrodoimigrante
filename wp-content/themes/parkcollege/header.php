@@ -45,20 +45,20 @@
 		
 			<!-- BEGIN #header-top -->
 			<div id="header-top" class="clearfix">
-			
-				<ul class="top-left-nav clearfix">
-					<li><a href="blog.php">Blog</a><span>/</span></li>
-					<li><a href="events.php">Events</a><span>/</span></li>
-					<li><a href="typography.php">Jobs</a><span>/</span></li>
-					<li><a href="courses.php">Courses</a><span>/</span></li>
-					<li><a href="typography.php">Campus</a><span>/</span></li>
-				</ul>
-			
 				<ul class="top-right-nav clearfix">
-					<li class="phone-icon">2618 7979 / 0800 7785 599</li>
-					<li class="email-icon"><?php bloginfo('admin_email');?></li>
+					<?php query_posts('post_type=attributes'); ?>
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<li class="phone-icon"><?php the_field('telefone');?></li>
+						<li class="email-icon"><?php the_field('email');?></li>
+					<?php endwhile; ?>
+					<?php else : ?>
+					<?php _e( '...' ); ?>
+					<?php endif; ?>
+					<?php wp_reset_query(); ?>	
 				</ul>
 			
+		
+
 			<!-- END #header-top -->
 			</div>
 			
@@ -66,15 +66,45 @@
 			<div id="header-content-wrapper" class="clearfix">
 			
 				<div id="logo">
-					<h1><a href="index.php"><span>Park</span>College</a></h1>
+					<?php query_posts('post_type=attributes'); ?>
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<a href="index.php"><img width="150px" src="<?php the_field('logo');?>"/></a>
+					<?php endwhile; ?>
+					<?php else : ?>
+					<?php _e( '...' ); ?>
+					<?php endif; ?>
+					<?php wp_reset_query(); ?>						
 				</div>
 			
-				<ul class="social-icons clearfix">	
-					<li><a target="_blank" href="#"><span class="gplus-icon"></span></a></li>
-					<li><a target="_blank" href="#"><span class="twitter-icon"></span></a></li>
-					<li><a target="_blank" href="#"><span class="facebook-icon"></span></a></li>
-					<li><a target="_blank" href="#"><span class="pinterest-icon"></span></a></li>
-					<li><a target="_blank" href="#"><span class="flickr-icon"></span></a></li>
+
+				<ul class="social-icons clearfix">
+					<?php query_posts('post_type=attributes'); ?>
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<li>
+						<a target="_blank" href="<?php the_field('twitter_url');?>">
+							<span class="<?php the_field('twitter');?>"></span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="<?php the_field('facebook_url');?>">
+							<span class="<?php the_field('facebook');?>"></span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="<?php the_field('google_plus_url');?>">
+							<span class="<?php the_field('google');?>"></span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="<?php the_field('youtube_url');?>">
+							<span class="<?php the_field('youtube');?>"></span>
+						</a>
+					</li>
+					<?php endwhile; ?>
+					<?php else : ?>
+					<?php endif; ?>
+					<?php wp_reset_query(); ?>	
+
 				</ul>
 			
 			<!-- END #header-content-wrapper -->
@@ -85,8 +115,8 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'main-menu' )); ?>
 		
 				<div class="menu-search-button"></div>
-				<form method="get" action="#" class="menu-search-form">
-					<input class="menu-search-field" type="text" onblur="if(this.value=='')this.value='To search, type and hit enter';" onfocus="if(this.value=='To search, type and hit enter')this.value='';" value="To search, type and hit enter" name="s" />
+				<form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="menu-search-form">
+					<input class="menu-search-field" type="search" onblur="if(this.value=='')this.value='To search, type and hit enter';" onfocus="if(this.value=='To search, type and hit enter')this.value='';" value="<?php echo get_search_query(); ?>" name="s" />
 				</form>
 		
 			<!-- END #main-menu-wrapper -->

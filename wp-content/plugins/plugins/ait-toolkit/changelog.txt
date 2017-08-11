@@ -1,0 +1,25 @@
+v1.7.0, 22.9.2015
+-----------------
+- New: Better compatibility with AIT Languages plugin and directory-like themes
+
+
+v1.6.1, 14.7.2015
+-----------------
+- Tweak: Addded function to store any custom taxonomy fields to database for further use (City Guide theme)
+
+
+v1.6.0, 1.7.2015
+-----------------
+- Update: All translations are now handled by AIT Languages plugin
+
+
+v1.5.7, 3.6.2015
+-----------------
+- Update: Updated all translations - translated some new strings
+- New:  Added new Ukrainian (uk) translation
+
+
+v1.5.6, 18.5.2015
+-----------------
+- Fixed: Item custom post type - do not allow some elements and options on Page Builder for Items Categories/Locations
+- Fixed: Map selected as default Header Type for new Categories and Locations
