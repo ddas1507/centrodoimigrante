@@ -256,55 +256,24 @@
 				<?php wp_reset_query(); ?>
 				
 				<ul class="event-list">
-				
-					<!-- BEGIN .event-wrapper -->
+					<?php $posts = new WP_Query("cat=1&showposts=3");?>
+					<?php while ($posts->have_posts()): $posts->the_post(); ?>
 					<li class="event-wrapper clearfix">
-					
 						<div class="event-date">
-							<div class="event-m">Feb</div>
-							<div class="event-d">08</div>	
+							<div class="event-m">
+								<?php $values = get_post_custom_values("agenda_mes"); echo $values[0]; ?>
+							</div>
+							<div class="event-d">
+								<?php $values = get_post_custom_values("agenda_dia"); echo $values[0]; ?>
+							</div>
 						</div>
-				
 						<div class="event-info">
-							<h4><a href="events-single.php">In molestie congu enim sit amet</a></h4>
-							<p>9:00am to 1:00pm</p>
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<p><?php $values = get_post_custom_values("agenda_horario"); echo $values[0]; ?></p>
 						</div>
-				
-					<!-- END .event-wrapper -->
 					</li>
-				
-					<!-- BEGIN .event-wrapper -->
-					<li class="event-wrapper clearfix">
-					
-						<div class="event-date">
-							<div class="event-m">Feb</div>
-							<div class="event-d">08</div>	
-						</div>
-				
-						<div class="event-info">
-							<h4><a href="events-single.php">In molestie congu enim sit amet</a></h4>
-							<p>9:00am to 1:00pm</p>
-						</div>
-				
-					<!-- END .event-wrapper -->
-					</li>
-					
-					<!-- BEGIN .event-wrapper -->
-					<li class="event-wrapper clearfix">
-					
-						<div class="event-date">
-							<div class="event-m">Feb</div>
-							<div class="event-d">08</div>	
-						</div>
-				
-						<div class="event-info">
-							<h4><a href="events-single.php">In molestie congu enim sit amet</a></h4>
-							<p>9:00am to 1:00pm</p>
-						</div>
-				
-					<!-- END .event-wrapper -->
-					</li>
-				
+					<?php endwhile;?>
+					<!-- BEGIN .event-wrapper -->				
 				</ul>
 				
 			<!-- END .content-block -->	
@@ -334,10 +303,10 @@
 		</div>
 		
 		<!-- END .content-wrapper-inner -->
-		</div>
-		
+		</div>		
 	<!-- END .content-wrapper -->
 	</div>
+
 	
 	<?php get_footer();?>
 	

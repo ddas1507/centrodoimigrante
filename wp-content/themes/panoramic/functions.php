@@ -526,5 +526,3 @@ add_action( 'tgmpa_register', 'panoramic_register_required_plugins' );
 		$excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
 		return $excerpt;
 	}
-
-	

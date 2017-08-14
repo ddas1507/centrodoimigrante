@@ -195,6 +195,10 @@ table tr a {
 /* -----------------------------------------------------------
 	Footer background colour
 ----------------------------------------------------------- */
+#footer-wrapper-parceiros {
+	background: #efefef;
+}
+
 #footer-wrapper {
 	background: #2153a8;
 }
@@ -296,5 +300,5 @@ table tr a {
 	Footer bottom bar text colour
 ----------------------------------------------------------- */
 #footer-bottom p {
-	color: #94c9b0;
+	color: #ffffff;
 }

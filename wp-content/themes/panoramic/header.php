@@ -115,8 +115,8 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'main-menu' )); ?>
 		
 				<!--div class="menu-search-button"></div>
-				<form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="menu-search-form">
-					<input class="menu-search-field" type="search" onblur="if(this.value=='')this.value='To search, type and hit enter';" onfocus="if(this.value=='To search, type and hit enter')this.value='';" value="<?php echo get_search_query(); ?>" name="s" />
+				<form method="get" action="<?php //echo esc_url( home_url( '/' ) ); ?>" class="menu-search-form">
+					<input class="menu-search-field" type="search" onblur="if(this.value=='')this.value='To search, type and hit enter';" onfocus="if(this.value=='To search, type and hit enter')this.value='';" value="<?php //echo get_search_query(); ?>" name="s" />
 				</form-->
 		
 			<!-- END #main-menu-wrapper -->
